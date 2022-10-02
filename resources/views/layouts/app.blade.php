@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Home</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="{{asset('/img/matcota/logo.png')}}" alt="" srcset="" width="40px" height="40px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -39,45 +39,43 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                        <li><a href="#contactanos" class="nav-link px-2 link-secondary"><strong>Llámanos: </strong> +56 9 1234 1234 </a></li>
+                        <li><a href="#" class="nav-link px-2 link-secondary"><strong>Email: </strong> hola@matcota.cl</a></li>
+                        <li>
+                            <button type="button" class="btn btn-outline-primary ms-2">Acceder</button>
+                        </li>
+                        <li>
+                            <div class="dropdown ms-5">
+                                <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Inicio
                                 </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                                <ul class="dropdown-menu text-small shadow" style="">
+                                  <li><a class="dropdown-item active" href="#" aria-current="page">Nosotros</a></li>
+                                </ul>
+                            </div>                        
+                            <div class="dropdown">
+                                <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                                </a>
+                                <ul class="dropdown-menu text-small shadow" style="">
+                                  <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
+                                  <li><a class="dropdown-item" href="#">Invenasdasdtory</a></li>
+                                  <li><a class="dropdown-item" href="#">Customers</a></li>
+                                  <li><a class="dropdown-item" href="#">Products</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Reports</a></li>
+                                  <li><a class="dropdown-item" href="#">Analytics</a></li>
+                                </ul>
+                            </div>                        
+                        </li>
                     </ul>
                 </div>
+                
             </div>
+     
         </nav>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
-</body>
-</html>
