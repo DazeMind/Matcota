@@ -1,4 +1,4 @@
-@include('layouts.app')
+@include('matcota.layouts.app')
 <div class="container">
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style=" background-image: url('{{asset('/img/matcota/fotos/imagen1.jpg')}}');" >
         <div class="col-md-5 p-lg-5 mx-auto my-5">
@@ -14,25 +14,27 @@
             <p class="text-secondary text-center">razones principales</p>
         </div>
         <div class="row ">
-            <div class="col">
-                <img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded" width="150px" height="150px">
-
-                <h3 class="text-dark text-center">Personas verificadas</h1>
-                <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación.</p>
-            </div>
-            <div class="col">
-                <img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded" width="150px" height="150px">
-
-                <h3 class="text-dark text-center">Personas verificadas</h1>
-                <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación.</p>
-            </div>
-            <div class="col">
-                <img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded" width="150px" height="150px">
-
-                <h3 class="text-dark text-center">Personas verificadas</h1>
-                <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación.</p>
-            </div>
-            <div class="col"></div>
+                <div class="col ">
+                    <p style="text-align:center;display:block;"><img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded d-flex justify-content-center" width="150px" height="150px"></p>         
+                    <h3 class="text-dark text-center">Personas verificadas</h3>
+                    <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación</p>
+                </div>
+                <div class="col">
+                    <p style="text-align:center;display:block;"><img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded d-flex justify-content-center" width="150px" height="150px"></p>         
+                    <h3 class="text-dark text-center">Personas verificadas</h3>
+                    <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación</p>
+                </div>
+                <div class="col">
+                    <p style="text-align:center;display:block;"><img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded d-flex justify-content-center" width="150px" height="150px"></p>         
+                    <h3 class="text-dark text-center">Personas verificadas</h3>
+                    <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación</p>
+                </div>
+                <div class="col">
+                    <img src="{{asset('/img/matcota/fotos/iconocheck.png')}}" alt="" class="rounded d-flex justify-content-center" width="150px" height="150px">         
+                    <h3 class="text-dark text-center">Personas verificadas</h3>
+                    <p class="text-secondary text-center">Todas las personas que ofrecen servicio de cuidado o paseo han pasado por un proceso de verificación</p>
+                </div>
+                      
         </div>
     </div>
     <div class="row">
@@ -105,5 +107,5 @@
 
 
 
-@include('layouts.footer')
+@include('matcota.layouts.footer')
 </div>
